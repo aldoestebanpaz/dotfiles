@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if type lsb_release >/dev/null 2>&1; then
     # linuxbase.org
     OS=$(lsb_release -si)
@@ -43,22 +45,12 @@ else
     VER=$(uname -r)
 fi
 
-echo "$OS - $VER"
-[ -d temp ] || mkdir temp
 
-if [ "$OS" = "Ubuntu" ] && [ "$VER" = "21.04" ]; then
-	# Add the Microsoft package signing key to your list of trusted keys and add the package repository
-    wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb \
-      -O temp/packages-microsoft-prod.deb
-    sudo dpkg -i temp/packages-microsoft-prod.deb
-    rm temp/packages-microsoft-prod.deb
 
-    # Install the SDK
-    sudo apt-get update
-    # This APT transport allows the use of repositories accessed via the HTTP Secure protocol (HTTPS), also referred to as HTTP over TLS.
-    sudo apt-get install -y apt-transport-https && \
-    sudo apt-get update && \
-    sudo apt-get install -y dotnet-sdk-6.0
+echo "INFO: ${OS} - ${VER}"
+
+if [ "$OS" = "Ubuntu" ] && [ "$VER" = "22.04" ]; then
+  echo "INFO: Read 'ubuntu/22.04-jammy/README.md'"
 else
-  echo "Non supported OS and VERSION."
+  echo "INFO: Non supported OS and VERSION."
 fi
