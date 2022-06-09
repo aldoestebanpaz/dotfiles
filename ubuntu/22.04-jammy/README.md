@@ -18,11 +18,13 @@ sudo -s bash ./install.sh
 FULLNAME="Foo Bar"
 EMAIL="foobar@email.com"
 
+git config --global user.name "${FULLNAME}"
+git config --global user.email "${EMAIL}"
+
 cat >>~/.bashrc <<EOF
 export DEBFULLNAME="${FULLNAME}"
 export DEBEMAIL="${EMAIL}"
 EOF
 
-git config --global user.name "${FULLNAME}"
-git config --global user.email "${EMAIL}"
+source ~/.bashrc
 ```
