@@ -12,6 +12,15 @@ sudo -s bash ./install.sh
 #   sudo -i sh -c "cd '$PWD'; ./install.sh"
 ```
 
+### Check if there are packages to upgrade or autoremove
+
+```sh
+apt list --upgradable
+# sudo apt upgrade
+
+sudo apt -y autoremove
+```
+
 ### Configure git and debian variables
 
 ```sh
