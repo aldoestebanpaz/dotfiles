@@ -65,6 +65,13 @@ sudo apt -y install \
 
 
 
+# vscode extensions
+put "Installing vscode extensions"
+sudo -u ${SUDO_USER} code --install-extension shardulm94.trailing-spaces
+sudo -u ${SUDO_USER} code --install-extension jinsihou.diff-tool
+
+
+
 # deb-get and 3rd party packages
 # see: https://github.com/wimpysworld/deb-get
 put "Installing 'deb-get' and 3rd party packages"
