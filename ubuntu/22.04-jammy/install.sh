@@ -122,6 +122,10 @@ sudo apt -y install \
 sudo apt -y install \
   gettext
 
+# graphical tool to diff and merge files
+sudo apt -y install \
+  meld
+
 # a hex editor
 sudo apt -y install \
   hexedit
@@ -138,9 +142,16 @@ sudo apt -y install \
 sudo apt -y install \
   dh-make
 
-# devscripts + dput + lintian + quilt + other ubuntu dev tools
+# devscripts (debuild, debsign, debchange, dch, uscan, wrap-and-sort, etc.)
+#   + licensecheck + dput + lintian + quilt + other ubuntu dev tools
 sudo apt -y install \
   ubuntu-dev-tools
+
+# git-buildpackage (gbp) - Suite to help with Debian packages in Git repositories
+sudo apt -y install \
+  git-buildpackage
+
+# pristine-tar - regenerate pristine tarballs
 
 # git-build-recipe - for testing Launchpad's recipes
 sudo apt -y install \
