@@ -77,8 +77,17 @@ sudo -u ${SUDO_USER} code --install-extension jinsihou.diff-tool
 put "Installing 'deb-get' and 3rd party packages"
 # deb-get - apt-get functionality for .debs published in 3rd party repositories or via direct download
 curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
-# discord and franz
-sudo deb-get install discord franz
+
+# Discord
+sudo deb-get install \
+  discord
+# Franz - A messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and many more.
+sudo deb-get install \
+  franz
+# DBeaver - Database GUI Client
+sudo deb-get install \
+  dbeaver-ce
+
 
 
 put "Installing dev tools"
@@ -132,6 +141,10 @@ sudo apt -y install \
 # devscripts + dput + lintian + quilt + other ubuntu dev tools
 sudo apt -y install \
   ubuntu-dev-tools
+
+# git-build-recipe - for testing Launchpad's recipes
+sudo apt -y install \
+  git-build-recipe
 
 # pbuilder
 # sudo apt -y install \
