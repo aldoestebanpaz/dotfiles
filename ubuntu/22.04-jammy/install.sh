@@ -148,10 +148,9 @@ sudo apt -y install \
   ubuntu-dev-tools
 
 # git-buildpackage (gbp) - Suite to help with Debian packages in Git repositories
+#   + pristine-tar - regenerate pristine tarballs
 sudo apt -y install \
   git-buildpackage
-
-# pristine-tar - regenerate pristine tarballs
 
 # git-build-recipe - for testing Launchpad's recipes
 sudo apt -y install \
