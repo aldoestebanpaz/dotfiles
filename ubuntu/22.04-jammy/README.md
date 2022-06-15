@@ -37,3 +37,14 @@ EOF
 
 source ~/.bashrc
 ```
+
+### Configure launchpad abbreviation for git
+
+```sh
+LP_USER="Foo"
+
+cat >>~/.gitconfig <<EOF
+[url "git+ssh://${LP_USER}@git.launchpad.net"]
+        insteadof = lp:
+EOF
+```

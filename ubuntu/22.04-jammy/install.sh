@@ -69,6 +69,7 @@ sudo apt -y install \
 put "Installing vscode extensions"
 sudo -u ${SUDO_USER} code --install-extension shardulm94.trailing-spaces
 sudo -u ${SUDO_USER} code --install-extension jinsihou.diff-tool
+sudo -u ${SUDO_USER} code --install-extension yzhang.markdown-all-in-one
 
 
 
