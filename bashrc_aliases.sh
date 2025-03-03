@@ -75,7 +75,10 @@ fetch_info() {
 pkg_s() { dpkg -l "$@" | grep ^ii; }
 #
 # Get files of installed package
-alias pkg_c='dpkg -L $@'
-#
+alias filesof='dpkg -L $@'
+# Search package of file
+alias packageof='dpkg -S $@'
+# Search package (non-installed) of file
+alias opackageof='apt-file search $@'
 # Open sources file
 alias apt_sources='less /etc/apt/sources.list'

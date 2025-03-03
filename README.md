@@ -13,7 +13,7 @@ git clone git@github.com:aldoestebanpaz/dotfiles.git
 
 ```sh
 if [ -f ~/.bashrc ]; then mv ~/.bashrc ~/.bashrc_bak; fi
-cp ~/dotfiles/.bashrc ~/.bashrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
 . ~/.bashrc
 ```
 

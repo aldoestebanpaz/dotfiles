@@ -14,3 +14,9 @@ Other alternatives:
 - [Archey](https://github.com/HorlogeSkynet/archey4)
 - [NerdFetch](https://github.com/ThatOneCalculator/NerdFetch)
 - [macchina](https://github.com/Macchina-CLI/macchina)
+
+## Packages
+
+### Searching files in non-installed packages
+
+* For apt: `apt-file`
