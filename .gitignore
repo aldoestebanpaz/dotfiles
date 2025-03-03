@@ -1,2 +1,5 @@
 # Temporary directory that stores all stuff that is downloaded
 temp
+
+# Directory with custom bash scripts automatically sourced by .bashrc
+private_rc/

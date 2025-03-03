@@ -5,8 +5,16 @@
 ### Clone the repo
 
 ```sh
+cd ~
 git clone git@github.com:aldoestebanpaz/dotfiles.git
-cd dotfiles
+```
+
+### Configure bash
+
+```sh
+if [ -f ~/.bashrc ]; then mv ~/.bashrc ~/.bashrc_bak; fi
+cp ~/dotfiles/.bashrc ~/.bashrc
+. ~/.bashrc
 ```
 
 ### Restore the .ssh/ files
