@@ -22,6 +22,7 @@ https://manual.lubuntu.me/stable/D/upgrading.html
 * `oxygen-icon-theme`: Default icon theme consumed by LXQt.
 * `papirus-icon-theme`: Alternative icon theme.
 * `arc-theme`: theme mainly for GTK apps.
+* `adwaita-icon-theme`: theme for GTK installed automatically as a dependency of `libgtk2.0-0`.
 * `kde-style-breeze`: Breeze theme for Qt5 apps.
 * `breeze-cursor-theme`: the cursor theme.
 * `sddm` + `sddm-theme-lubuntu` + `lubuntu-default-settings`: QML-based display manager
