@@ -28,7 +28,10 @@ alias pad='featherpad'
 # see https://wiki.archlinux.org/title/XDG_MIME_Applications
 alias mimeof='xdg-mime query filetype $@'
 # Get default app for given mimetype
+# eg. defaultof $(mimeof /)
 alias defaultof='xdg-mime query default $@'
+# Run the program for the respective mimetype
+alias start='xdg-open $@'
 
 
 # ls in columns
@@ -51,7 +54,28 @@ alias psg='ps -eaf | grep $@'
 
 
 # Fetch information
-fetch_info() {
+fetchinfo() {
+    echo Resolution
+    resolution="$(xrandr --nograb --current |\
+                  awk -F 'connected |\\+|\\(' \
+                  '/ connected.*[0-9]+x[0-9]+\+/ && $2 {printf $2 ", "}')"
+
+    resolution="${resolution/primary, }"
+    resolution="${resolution/primary }"
+    resolution="${resolution//\*}"
+    resolution="${resolution%%,}"
+    resolution="${resolution%%, }"
+    echo $resolution
+    #
+    echo Windows Manager
+    id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
+    id=${id##* }
+    wm=$(xprop -id "$id" -notype -len 100 -f _NET_WM_NAME 8t)
+    wm=${wm/*WM_NAME = }
+    wm=${wm/\"}
+    wm=${wm/\"*}
+    echo $wm
+    #
     echo Default file manager
     xdg-mime query default inode/directory
     echo Default text editor
@@ -70,9 +94,9 @@ fetch_info() {
 # apt-get and dpkg
 #
 # Chech for installed packages with given string pattern
-# eg. dkg_s 'git*'
-# eg. dkg_s '*-desktop'
-pkg_s() { dpkg -l "$@" | grep ^ii; }
+# eg. installedof 'git*'
+# eg. installedof '*-desktop'
+installof() { dpkg -l "$@" | grep ^ii; }
 #
 # Get files of installed package
 alias filesof='dpkg -L $@'
