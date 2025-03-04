@@ -21,7 +21,7 @@ https://manual.lubuntu.me/stable/D/upgrading.html
 * `ubuntu-mono` + `lubuntu-artwork`: icon themes, wallpapers, LXQt themes, and openbox-3 themes.
 * `oxygen-icon-theme`: Default icon theme consumed by LXQt.
 * `papirus-icon-theme`: Alternative icon theme.
-* `arc-theme`: theme mainly for GTK apps.
+* `arc-theme`: theme mainly for GTK apps. It installs `gnome-themes-extra` and `gnome-themes-extra-data` too.
 * `adwaita-icon-theme`: theme for GTK installed automatically as a dependency of `libgtk2.0-0`.
 * `kde-style-breeze`: Breeze theme for Qt5 apps.
 * `breeze-cursor-theme`: the cursor theme.
