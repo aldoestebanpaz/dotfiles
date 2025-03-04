@@ -102,6 +102,8 @@ installof() { dpkg -l "$@" | grep ^ii; }
 alias filesof='dpkg -L $@'
 # Search package of file
 alias packageof='dpkg -S $@'
+# Get files of non-installed package
+alias ofilesof='apt-file list $@'
 # Search package (non-installed) of file
 alias opackageof='apt-file search $@'
 # Open sources file
