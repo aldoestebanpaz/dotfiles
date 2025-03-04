@@ -18,6 +18,7 @@ https://manual.lubuntu.me/stable/D/upgrading.html
 
 * `plymouth` + `plymouth-theme-lubuntu-logo` + `plymouth-theme-lubuntu-text`: graphical boot animation while the booting
 * `lubuntu-grub-theme`: theme for grub.
+* `ubuntu-mono` + `lubuntu-artwork`: icon themes, wallpapers, LXQt themes, and openbox-3 themes.
 * `oxygen-icon-theme`: Default icon theme consumed by LXQt.
 * `papirus-icon-theme`: Alternative icon theme.
 * `arc-theme`: theme mainly for GTK apps.
@@ -33,12 +34,16 @@ https://manual.lubuntu.me/stable/D/upgrading.html
 
 ## TODOs
 
-Missing the explanation for the following items from `lubuntu-default-settings`:
+Explain the purpose of the following items from `lubuntu-default-settings`:
 ```
 /usr/share/glib-2.0/schemas/50_lubuntu.gschema.override
 /usr/share/lubuntu/qt/Trolltech-qt-session.conf
 /usr/share/lubuntu/qt/Trolltech.conf
 ```
+
+## Recommended
+
+* Install `qt5-style-kvantum` for more themes in Qt apps.
 
 ## Desktop customizations
 
