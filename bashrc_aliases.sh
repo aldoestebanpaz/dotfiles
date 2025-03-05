@@ -47,6 +47,8 @@ alias lllh='ls -aFlh'
 # Search files
 # eg. findfile '*.htm'
 findfile() { find / -type f -iname ''$@'' 2>/dev/null; }
+grepusr() { grep -nHri ''$@'' /usr 2>/dev/null; }
+grepetc() { grep -nHri ''$@'' /etc 2>/dev/null; }
 
 
 # search a process
@@ -97,7 +99,8 @@ fetchinfo() {
 # eg. installedof 'git*'
 # eg. installedof '*-desktop'
 installof() { dpkg -l "$@" | grep ^ii; }
-#
+# Get installed reverse dependencies
+alias dependsof='apt-cache rdepends --installed $@'
 # Get files of installed package
 alias filesof='dpkg -L $@'
 # Search package of file
