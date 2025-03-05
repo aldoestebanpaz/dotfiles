@@ -260,6 +260,8 @@ NOTE: the following configurations are merged to create the final result in the 
 /etc/xdg/xdg-Lubuntu/lxqt/panel.conf
 ```
 
+If the panel accidentally disappears just remove `~/.config/lxqt/panel.conf` and login again after running `lxqt-leave --logout`.
+
 
 ## lubuntu-update-notifier, the packages updates dialog that appears when log in
 
